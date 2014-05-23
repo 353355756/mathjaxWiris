@@ -14,20 +14,21 @@
 	//var cdn = 'http:\/\/cdn.mathjax.org\/mathjax\/2.2-latest\/MathJax.js?config=MML_HTMLorMML-full';
 
 	//var cdn = 'http:\/\/cdn.mathjax.org\/mathjax\/2.2-latest\/MathJax.js?config=TeX-AMS_HTML';
-	var cdn = '../../../js/mathjax/MathJax.js?config=MML_HTMLorMML-full';
-
-	CKEDITOR.plugins.add( 'mathjax_wiris', {
+	var that; 
+	var cdn = 'core/mathjax/MathJax.js?config=MML_HTMLorMML-full';
+	CKEDITOR.plugins.add( 'mathjaxWiris', {
 		lang: 'ar,ca,cs,cy,de,el,en,en-gb,es,fa,fi,fr,gl,he,hr,hu,it,ja,km,nb,nl,no,pl,pt,pt-br,ro,ru,sl,sv,tt,uk,vi,zh,zh-cn', // %REMOVE_LINE_CORE%
 		requires: 'widget,dialog',
-		icons: 'mathjax_wiris',
+		icons: 'mathjaxWiris',
 		//hidpi: true, // %REMOVE_LINE_CORE%
 
 		init: function( editor ) {
+			that = this;
 			var cls = editor.config.mathJaxClass || 'math-tex';
 
-			editor.widgets.add( 'mathjax_wiris', {
+			editor.widgets.add( 'mathjaxWiris', {
 				inline: true,
-				dialog: 'mathjax_wiris',
+				dialog: 'mathjaxWiris',
 				button: editor.lang.mathjax.button,
 				mask: true,
 				allowedContent: 'span(!' + cls + ')',
@@ -46,10 +47,6 @@
 
 				parts: {
 					span: 'span'
-				},
-
-				defaults: {
-					math: '\\(x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}\\)'
 				},
 
 				init: function() {
@@ -126,12 +123,12 @@
 			} );
 
 			// Add dialog.
-			CKEDITOR.dialog.add( 'mathjax_wiris', this.path + 'dialogs/mathjax.js' );
+			CKEDITOR.dialog.add( 'mathjaxWiris', this.path + 'dialogs/mathjaxWiris.js' );
 
 			// Add MathJax script to page preview.
 			editor.on( 'contentPreview', function( evt ) {
 				evt.data.dataValue = evt.data.dataValue.replace( /<\/head>/,
-					'<script src="' + ( editor.config.mathJaxLib ? CKEDITOR.getUrl( editor.config.mathJaxLib ) : cdn ) + '"><\/script><\/head>' );
+					'<script src="' + ( editor.config.mathJaxLib ? CKEDITOR.getUrl( editor.config.mathJaxLib ) : this.path+cdn ) + '"><\/script><\/head>' );
 			} );
 
 			editor.on( 'paste', function( evt ) {
@@ -198,19 +195,6 @@
 		}
 	};
 
-	/**
-	 * Trims MathJax value from '\(1+1=2\)' to '1+1=2'.
-	 *
-	 * @private
-	 * @param {String} value String to trim.
-	 * @returns {String} Trimed string.
-	 */
-	CKEDITOR.plugins.mathjax.trim = function( value ) {
-		var begin = value.indexOf( '\\(' ) + 2,
-			end = value.lastIndexOf( '\\)' );
-
-		return value.substring( begin, end );
-	};
 
 	/**
 	 * FrameWrapper is responsible for communication between the MathJax library
@@ -253,7 +237,7 @@
 				// Function called when MathJax finish his job.
 				updateDoneHandler = CKEDITOR.tools.addFunction( function() {
 					CKEDITOR.plugins.mathjax.copyStyles( iFrame, preview );
-
+					
 					preview.setHtml( buffer.getHtml() );
 
 					editor.fire( 'lockSnapshot' );
@@ -340,7 +324,7 @@
 								'</script>' +
 
 								// Load MathJax lib.
-								'<script src="' + ( editor.config.mathJaxLib || cdn ) + '"></script>' +
+								'<script src="' + ( editor.config.mathJaxLib || that.path+cdn ) + '"></script>' +
 							'</head>' +
 							'<body style="padding:0;margin:0;background:transparent;overflow:hidden">' +
 								'<span id="preview"></span>' +
@@ -451,7 +435,7 @@
 				'<html>' +
 				'<head>' +
 					'<meta charset="utf-8">' +
-					'<script src="../../../js/wiris.js"></script>' +
+					'<script src="'+(that&&that.path)+'core/wiris.js"></script>' +
 					'<script type="text/javascript">' +
 							'function getCKE() {' +
 								'if ( typeof window.parent.CKEDITOR == \'object\' ) {' +
@@ -465,7 +449,6 @@
 								'editor.insertInto(document.getElementById("wiris"));' +
 								'getCKE().wiris_editor = editor;' +
 							'};'+
-
 					'</script>' +
 				'</head>' +
 				'<body>' +
