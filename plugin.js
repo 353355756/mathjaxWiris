@@ -60,7 +60,7 @@
 							scrolling: 'no',
 							frameborder: 0,
 							allowTransparency: true,
-							src: CKEDITOR.plugins.mathjax.fixSrc
+							src: CKEDITOR.plugins.mathjaxWiris.fixSrc
 						} );
 						this.parts.span.append( iframe );
 					}
@@ -72,9 +72,9 @@
 						// Src attribute must be recreated to fix custom domain error after undo
 						// (see iFrame.removeAttribute( 'src' ) in frameWrapper.load).
 						if ( CKEDITOR.env.ie )
-							iframe.setAttribute( 'src', CKEDITOR.plugins.mathjax.fixSrc );
+							iframe.setAttribute( 'src', CKEDITOR.plugins.mathjaxWiris.fixSrc );
 
-						this.frameWrapper = new CKEDITOR.plugins.mathjax.frameWrapper( iframe, editor );
+						this.frameWrapper = new CKEDITOR.plugins.mathjaxWiris.frameWrapper( iframe, editor );
 						this.frameWrapper.setValue( this.data.math );
 					} );
 				},
@@ -147,7 +147,7 @@
 	 * @singleton
 	 * @class CKEDITOR.plugins.mathjax
 	 */
-	CKEDITOR.plugins.mathjax = {};
+	CKEDITOR.plugins.mathjaxWiris = {};
 
 	/**
 	 * A variable to fix problems with `iframe`. This variable is global
@@ -156,7 +156,7 @@
 	 * @private
 	 * @property {String} fixSrc
 	 */
-	CKEDITOR.plugins.mathjax.fixSrc =
+	CKEDITOR.plugins.mathjaxWiris.fixSrc =
 		// In Firefox src must exist and be different than about:blank to emit load event.
 		CKEDITOR.env.gecko ? 'javascript:true' :
 		// Support for custom document.domain in IE.
@@ -175,7 +175,7 @@
 	 * @private
 	 * @property {String} loadingIcon
 	 */
-	CKEDITOR.plugins.mathjax.loadingIcon = CKEDITOR.plugins.get( 'mathjax' ).path + 'images/loader.gif';
+	CKEDITOR.plugins.mathjaxWiris.loadingIcon = CKEDITOR.plugins.get( 'mathjaxWiris' ).path + 'images/loader.gif';
 
 	/**
 	 * Computes predefined styles and copies them to another element.
@@ -184,7 +184,7 @@
 	 * @param {CKEDITOR.dom.element} from Copy source.
 	 * @param {CKEDITOR.dom.element} to Copy target.
 	 */
-	CKEDITOR.plugins.mathjax.copyStyles = function( from, to ) {
+	CKEDITOR.plugins.mathjaxWiris.copyStyles = function( from, to ) {
 		var stylesToCopy = [ 'color', 'font-family', 'font-style', 'font-weight', 'font-variant', 'font-size' ];
 
 		for ( var i = 0; i < stylesToCopy.length; i++ ) {
@@ -210,7 +210,7 @@
 	 * @param {CKEDITOR.editor} editor The editor instance.
 	 */
 	if ( !( CKEDITOR.env.ie && CKEDITOR.env.version == 8 ) ) {
-		CKEDITOR.plugins.mathjax.frameWrapper = function( iFrame, editor ) {
+		CKEDITOR.plugins.mathjaxWiris.frameWrapper = function( iFrame, editor ) {
 
 			var buffer, preview, value, newValue,
 				doc = iFrame.getFrameDocument(),
@@ -380,7 +380,7 @@
 	} else {
 		// In IE8 MathJax does not work stable so instead of using standard
 		// frame wrapper it is replaced by placeholder to show pure TeX in iframe.
-		CKEDITOR.plugins.mathjax.frameWrapper = function( iFrame, editor ) {
+		CKEDITOR.plugins.mathjaxWiris.frameWrapper = function( iFrame, editor ) {
 			iFrame.getFrameDocument().write( '<!DOCTYPE html>' +
 				'<html>' +
 				'<head>' +
@@ -415,7 +415,7 @@
 		};
 	}
 
-	CKEDITOR.plugins.mathjax.frameWiris = function( iFrame, editor ) {
+	CKEDITOR.plugins.mathjaxWiris.frameWiris = function( iFrame, editor ) {
 
 			var doc = iFrame.getFrameDocument();
 
@@ -435,7 +435,7 @@
 				'<html>' +
 				'<head>' +
 					'<meta charset="utf-8">' +
-					'<script src="'+(that&&that.path)+'core/wiris.js"></script>' +
+					'<script src="'+(that&&that.path)+'core/wiris/wiris.js"></script>' +
 					'<script type="text/javascript">' +
 							'function getCKE() {' +
 								'if ( typeof window.parent.CKEDITOR == \'object\' ) {' +

@@ -1,0 +1,758 @@
+"{
+    name: 'editor',
+    childs: [
+        {
+            name: 'actions',
+            childs: [
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'fraction'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mstyledisplaystyle="true">'+"\r\n"+'<mfrac>'+"\r\n"+'<mrow/>'+"\r\n"+'<mrow/>'+"\r\n"+'</mfrac>'+"\r\n"+'</mstyle>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'smallFraction'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mstyledisplaystyle="false">'+"\r\n"+'<mfrac>'+"\r\n"+'<mrow/>'+"\r\n"+'<mrow/>'+"\r\n"+'</mfrac>'+"\r\n"+'</mstyle>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'bevelledFraction'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mstyledisplaystyle="true">'+"\r\n"+'<mfracbevelled="true">'+"\r\n"+'<mrow/>'+"\r\n"+'<mrow/>'+"\r\n"+'</mfrac>'+"\r\n"+'</mstyle>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'slashedFraction'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mstyledisplaystyle="true">'+"\r\n"+'<mfracslashed="true">'+"\r\n"+'<mrow/>'+"\r\n"+'<mrow/>'+"\r\n"+'</mfrac>'+"\r\n"+'</mstyle>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'smallBevelledFraction'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mstyledisplaystyle="false">'+"\r\n"+'<mfracbevelled="true">'+"\r\n"+'<mrow/>'+"\r\n"+'<mrow/>'+"\r\n"+'</mfrac>'+"\r\n"+'</mstyle>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'squareRoot'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<msqrt>'+"\r\n"+'<mrow/>'+"\r\n"+'</msqrt>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'nRoot',
+                        'offset': '2'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mroot>'+"\r\n"+'<mrow/>'+"\r\n"+'<mrow/>'+"\r\n"+'</mroot>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'subscript'
+                    },
+                    childs: [
+                        {
+                            name: 'icon',
+                            attrs: {
+                                'src': 'subscript'
+                            },
+                            mml: '<mmultiscripts><mactionactiontype="argument"><mrow/></maction><mrow/><mo></mo><mprescripts/><mspacewidth="6px"/><mo></mo></mmultiscripts>'
+                        },
+                        {
+                            name: 'content',
+                            mml: '<msub>'+"\r\n"+'<mactionactiontype="argument">'+"\r\n"+'<mrow/>'+"\r\n"+'</maction>'+"\r\n"+'<mrow/>'+"\r\n"+'</msub>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'superscript'
+                    },
+                    childs: [
+                        {
+                            name: 'icon',
+                            attrs: {
+                                'src': 'superscript'
+                            },
+                            mml: '<mmultiscripts><mactionactiontype="argument"><mrow/></maction><mo></mo><mrow/><mprescripts/><mspacewidth="6px"/><mo></mo></mmultiscripts>'
+                        },
+                        {
+                            name: 'content',
+                            mml: '<msup>'+"\r\n"+'<mactionactiontype="argument">'+"\r\n"+'<mrow/>'+"\r\n"+'</maction>'+"\r\n"+'<mrow/>'+"\r\n"+'</msup>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'subsuperscript'
+                    },
+                    childs: [
+                        {
+                            name: 'icon',
+                            attrs: {
+                                'src': 'subsuperscript'
+                            },
+                            mml: '<mmultiscripts><mactionactiontype="argument"><mrow/></maction><mrow/><mrow/><mprescripts/><mspacewidth="6px"/><mo></mo></mmultiscripts>'
+                        },
+                        {
+                            name: 'content',
+                            mml: '<msubsup>'+"\r\n"+'<mactionactiontype="argument">'+"\r\n"+'<mrow/>'+"\r\n"+'</maction>'+"\r\n"+'<mrow/>'+"\r\n"+'<mrow/>'+"\r\n"+'</msubsup>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'leftSuperscript',
+                        'offset': '2'
+                    },
+                    childs: [
+                        {
+                            name: 'icon',
+                            attrs: {
+                                'src': 'leftSuperscript'
+                            },
+                            mml: '<mmultiscripts><mactionactiontype="argument"><mrow/></maction><mspacewidth="6px"/><mo></mo><mprescripts/><mo></mo><mrow/></mmultiscripts>'
+                        },
+                        {
+                            name: 'content',
+                            mml: '<mmultiscripts>'+"\r\n"+'<mactionactiontype="argument">'+"\r\n"+'<mrow/>'+"\r\n"+'</maction>'+"\r\n"+'<mprescripts/>'+"\r\n"+'<none/>'+"\r\n"+'<mrow/>'+"\r\n"+'</mmultiscripts>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'leftSubscript',
+                        'offset': '2'
+                    },
+                    childs: [
+                        {
+                            name: 'icon',
+                            attrs: {
+                                'src': 'leftSubscript'
+                            },
+                            mml: '<mmultiscripts><mactionactiontype="argument"><mrow/></maction><mspacewidth="6px"/><mo></mo><mprescripts/><mrow/><mo></mo></mmultiscripts>'
+                        },
+                        {
+                            name: 'content',
+                            mml: '<mmultiscripts>'+"\r\n"+'<mactionactiontype="argument">'+"\r\n"+'<mrow/>'+"\r\n"+'</maction>'+"\r\n"+'<mprescripts/>'+"\r\n"+'<mrow/>'+"\r\n"+'<none/>'+"\r\n"+'</mmultiscripts>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'leftSubscriptAndSuperscript',
+                        'offset': '3'
+                    },
+                    childs: [
+                        {
+                            name: 'icon',
+                            attrs: {
+                                'src': 'leftSubscriptAndSuperscript'
+                            },
+                            mml: '<mmultiscripts><mactionactiontype="argument"><mrow/></maction><mspacewidth="6px"/><mo></mo><mprescripts/><mrow/><mrow/></mmultiscripts>'
+                        },
+                        {
+                            name: 'content',
+                            mml: '<mmultiscripts>'+"\r\n"+'<mactionactiontype="argument">'+"\r\n"+'<mrow/>'+"\r\n"+'</maction>'+"\r\n"+'<mprescripts/>'+"\r\n"+'<mrow/>'+"\r\n"+'<mrow/>'+"\r\n"+'</mmultiscripts>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'parenthesis'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mfenced>'+"\r\n"+'<mrow/>'+"\r\n"+'</mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'squareBracket'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mfencedclose="]"open="[">'+"\r\n"+'<mrow/>'+"\r\n"+'</mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'verticalBar'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mfencedclose="|"open="|">'+"\r\n"+'<mrow/>'+"\r\n"+'</mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'doubleVerticalBar'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mfencedclose="||"open="||">'+"\r\n"+'<mrow/>'+"\r\n"+'</mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'angleBrackets'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mfencedclose="&gt;"open="&lt;">'+"\r\n"+'<mrow/>'+"\r\n"+'</mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'curlyBracket'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mfencedclose="}"open="{">'+"\r\n"+'<mrow/>'+"\r\n"+'</mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'floor'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mfencedclose="\u230b"open="\u230a"><mrow/></mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'ceiling'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mfencedclose="\u2309"open="\u2308"><mrow/></mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'angleBracketsWithBar'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mfencedclose="&gt;"open="&lt;"separators="|">'+"\r\n"+'<mrow/><mrow/>'+"\r\n"+'</mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'upCurlyBracket',
+                        'offset': '3'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mover><mrow/><mo>\u23de</mo></mover>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'downCurlyBracket'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<munder><mrow/><mo>\u23df</mo></munder>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'upParenthesis',
+                        'offset': '3'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mover><mrow/><mo>\u23dc</mo></mover>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'downParenthesis'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<munder><mrow/><mo>\u23dd</mo></munder>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'aposApos'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mo>\'\'</mo>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'numberPi'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mimathvariant="normal">\u03c0</mi>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'naturals'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mimathvariant="normal">\u2115</mi>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'rationals'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mimathvariant="normal">\u211a</mi>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'reals'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mimathvariant="normal">\u211d</mi>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'integers'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mimathvariant="normal">\u2124</mi>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'complexes'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mimathvariant="normal">\u2102</mi>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'primes'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mimathvariant="normal">\u2119</mi>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'ell'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mimathvariant="normal">\u2113</mi>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'zTransform'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mo>\u01b5</mo>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'table'
+                    },
+                    childs: [
+                        {
+                            name: 'icon',
+                            attrs: {
+                                'src': 'table'
+                            },
+                            mml: '<mtable>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'
+                        },
+                        {
+                            name: 'content',
+                            mml: '<mtable>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'squareTable',
+                        'offset': '2'
+                    },
+                    childs: [
+                        {
+                            name: 'icon',
+                            attrs: {
+                                'src': 'squareTable'
+                            },
+                            mml: '<mfencedclose="]"open="[">'+"\r\n"+'<mtable>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        },
+                        {
+                            name: 'content',
+                            mml: '<mfencedclose="]"open="[">'+"\r\n"+'<mtable>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'verticalLineTable',
+                        'offset': '2'
+                    },
+                    childs: [
+                        {
+                            name: 'icon',
+                            attrs: {
+                                'src': 'verticalLineTable'
+                            },
+                            mml: '<mfencedclose="|"open="|">'+"\r\n"+'<mtable>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        },
+                        {
+                            name: 'content',
+                            mml: '<mfencedclose="|"open="|">'+"\r\n"+'<mtable>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'parenthesisTable',
+                        'offset': '2'
+                    },
+                    childs: [
+                        {
+                            name: 'icon',
+                            attrs: {
+                                'src': 'parenthesisTable'
+                            },
+                            mml: '<mfenced>'+"\r\n"+'<mtable>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        },
+                        {
+                            name: 'content',
+                            mml: '<mfenced>'+"\r\n"+'<mtable>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'column'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mtable>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'row'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mtable>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'squareColumn',
+                        'offset': '2'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mfencedclose="]"open="[">'+"\r\n"+'<mtable>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'squareRow',
+                        'offset': '2'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mfencedclose="]"open="[">'+"\r\n"+'<mtable>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'parenthesisColumn',
+                        'offset': '2'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mfenced>'+"\r\n"+'<mtable>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'parenthesisRow',
+                        'offset': '2'
+                    },
+                    childs: [
+                        {
+                            name: 'content',
+                            mml: '<mfenced>'+"\r\n"+'<mtable>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'lCurlyColumn',
+                        'offset': '2'
+                    },
+                    childs: [
+                        {
+                            name: 'icon',
+                            attrs: {
+                                'src': 'lCurlyColumn'
+                            },
+                            mml: '<mfencedclose=""open="{">'+"\r\n"+'<mtablecolumnalign="left">'+"\r\n"+'<mtr>'+"\r\n"+'<mtd>'+"\r\n"+'<mrowstyle="width:1.5ex"/>'+"\r\n"+'</mtd>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        },
+                        {
+                            name: 'iconRTL',
+                            attrs: {
+                                'src': 'rtl_lCurlyColumn'
+                            },
+                            mml: '<mfencedclose=""open="{">'+"\r\n"+'<mtablecolumnalign="right">'+"\r\n"+'<mtr>'+"\r\n"+'<mtd>'+"\r\n"+'<mrowstyle="width:1.5ex"/>'+"\r\n"+'</mtd>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        },
+                        {
+                            name: 'content',
+                            mml: '<mfencedclose=""open="{">'+"\r\n"+'<mtablecolumnalign="left">'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        },
+                        {
+                            name: 'contentRTL',
+                            mml: '<mfencedclose=""open="{">'+"\r\n"+'<mtablecolumnalign="right">'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'rCurlyColumn',
+                        'offset': '2'
+                    },
+                    childs: [
+                        {
+                            name: 'icon',
+                            attrs: {
+                                'src': 'rCurlyColumn'
+                            },
+                            mml: '<mfencedclose="}"open="">'+"\r\n"+'<mtablecolumnalign="right">'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd>'+"\r\n"+'<mrowstyle="width:1.5ex"/>'+"\r\n"+'</mtd>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        },
+                        {
+                            name: 'iconRTL',
+                            attrs: {
+                                'src': 'rtl_rCurlyColumn'
+                            },
+                            mml: '<mfencedclose="}"open="">'+"\r\n"+'<mtablecolumnalign="left">'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd>'+"\r\n"+'<mrowstyle="width:1.5ex"/>'+"\r\n"+'</mtd>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        },
+                        {
+                            name: 'content',
+                            mml: '<mfencedclose="}"open="">'+"\r\n"+'<mtablecolumnalign="right">'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        },
+                        {
+                            name: 'contentRTL',
+                            mml: '<mfencedclose="}"open="">'+"\r\n"+'<mtablecolumnalign="left">'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'piecewiseFunction',
+                        'offset': '2'
+                    },
+                    childs: [
+                        {
+                            name: 'icon',
+                            attrs: {
+                                'src': 'piecewiseFunction'
+                            },
+                            mml: '<mfencedclose=""open="{">'+"\r\n"+'<mtablecolumnalign="left">'+"\r\n"+'<mtr>'+"\r\n"+'<mtd>'+"\r\n"+'<mrowstyle="width:1.15ex"/>'+"\r\n"+'</mtd>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd>'+"\r\n"+'<mrowstyle="width:1.3ex"/>'+"\r\n"+'</mtd>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        },
+                        {
+                            name: 'iconRTL',
+                            attrs: {
+                                'src': 'rtl_piecewiseFunction'
+                            },
+                            mml: '<mfencedclose=""open="{">'+"\r\n"+'<mtablecolumnalign="right">'+"\r\n"+'<mtr>'+"\r\n"+'<mtd>'+"\r\n"+'<mrowstyle="width:1.15ex"/>'+"\r\n"+'</mtd>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd>'+"\r\n"+'<mrowstyle="width:1.3ex"/>'+"\r\n"+'</mtd>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        },
+                        {
+                            name: 'content',
+                            mml: '<mfencedclose=""open="{">'+"\r\n"+'<mtablecolumnalign="left"columnspacing="1.4ex">'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        },
+                        {
+                            name: 'contentRTL',
+                            mml: '<mfencedclose=""open="{">'+"\r\n"+'<mtablecolumnalign="right"columnspacing="1.4ex">'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/>'+"\r\n"+'<mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'+"\r\n"+'</mfenced>'
+                        }
+                    ]
+                },
+                {
+                    name: 'action',
+                    attrs: {
+                        'id': 'equationAlign',
+                        'offset': '2'
+                    },
+                    childs: [
+                        {
+                            name: 'icon',
+                            attrs: {
+                                'src': 'equationAlign'
+                            },
+                            mml: '<mtablecolumnalign="right center left"columnspacing="0px">'+"\r\n"+'<mtr>'+"\r\n"+'<mtd>'+"\r\n"+'<mrowstyle="width:1.5ex"/>'+"\r\n"+'</mtd><mtd><mo>=</mo></mtd><mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/><mtd><mo>=</mo></mtd>'+"\r\n"+'<mtd>'+"\r\n"+'<mrowstyle="width:1.3ex"/>'+"\r\n"+'</mtd>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'
+                        },
+                        {
+                            name: 'iconRTL',
+                            attrs: {
+                                'src': 'rtl_equationAlign'
+                            },
+                            mml: '<mtablecolumnalign="left center right"columnspacing="0px">'+"\r\n"+'<mtr>'+"\r\n"+'<mtd>'+"\r\n"+'<mrowstyle="width:1.5ex"/>'+"\r\n"+'</mtd><mtd><mo>=</mo></mtd><mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/><mtd><mo>=</mo></mtd>'+"\r\n"+'<mtd>'+"\r\n"+'<mrowstyle="width:1.3ex"/>'+"\r\n"+'</mtd>'+"\r\n"+'</mtr>'+"\r\n"+'</mtable>'
+                        },
+                        {
+                            name: 'content',
+                            mml: '<mtablecolumnalign="right center left"columnspacing="2px">'+"\r\n"+'<mtr>'+"\r\n"+'<mtd/><mtd><mo>=</mo></mtd><mtd/>'+"\r\n"+'</mtr>'+"\r\n"+'<mtr>'+

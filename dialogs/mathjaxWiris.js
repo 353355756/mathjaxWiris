@@ -28,17 +28,19 @@ CKEDITOR.dialog.add( 'mathjaxWiris', function( editor ) {
 
 						onLoad: function( widget ) {
 							var iFrame = CKEDITOR.document.getById( this.domId ).getChild( 0 );
-							var wiris_editor = new CKEDITOR.plugins.mathjax.frameWiris( iFrame, editor );
+							var wiris_editor = new CKEDITOR.plugins.mathjaxWiris.frameWiris( iFrame, editor );
 							
 						},
 
 						setup: function( widget ) {
 							//preview.setValue( widget.data.math );
-							CKEDITOR.wiris_editor.setMathML();
+							//CKEDITOR.wiris_editor.setMathML();
 						},
 
 						commit: function( widget ) {
-							widget.setData( 'math',  CKEDITOR.wiris_editor.getMathML() );
+							var ml = CKEDITOR.wiris_editor.getMathML();
+							ml = ml.substring(0,ml.length-7).concat("<mo>&#160;</mo></math>");
+							widget.setData( 'math',  ml );
 						}
 					}
 				]
